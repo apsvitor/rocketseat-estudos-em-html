@@ -1,2 +1,4 @@
-# rocketseat-estudos-em-html
-Guia Estelar HTML da Rocketseat
+# rocketseat-estudos-em-html-css
+Guia Estelar HTML e CSS da Rocketseat
+
+### Anotações, Exemplos e Exercícios
