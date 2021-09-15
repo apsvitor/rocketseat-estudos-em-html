@@ -1,0 +1,208 @@
+/*
+CSS
+
+O que significa CSS?
+    Cascading Style Sheet
+    Código para criar estilos no HTML
+    Não é linguagem de programação
+    É uma linguagem style sheet
+*/
+
+/*
+ANATOMIA
+    - h1 -> Selector (seletor)
+    - Tudo que está entre as chaves: Declaration (declaração)
+    - color, font-size, ...: Properties (propriedades)
+    - blue, 60 px, ...: Property Value (valor da propriedade)
+
+*/
+
+h1 {
+    color: blue;
+    font-size: 60px;
+    background: gray;
+}
+
+
+/*
+Selectors
+    - Conecta um elemento HTML ao CSS
+
+    - Tipos:
+        - Global selector *
+        - Element/Type selector h1, h2, p, div, ....
+        - Class selector .red, .m-4, .nome-da-classe....
+        - Attribute selector, Pseudo-class, Pseudo-element, ...
+
+*/
+
+/*
+    Exemplo em que temos uma div com id (#) e classe (.) 
+    <div id="container" class="m-40">
+        <h1> Título </h1>
+    </div>
+*/
+
+#container {
+    width: 200px;
+}
+
+.m-40 {
+    margin: 40px;
+}
+
+/* é possível agrupar propriedades */
+h1, h2 {
+    /* propriedades */
+}
+
+/* 
+Box Model: É uma caixa retangular. Essa caixa possui as mesmas propriedades de uma caixa 2D, e tem como propriedades:
+
+    Tamanho (largura x altura width e height, respectivamente)
+    Conteúdo: o content
+    Bordas: o border
+    Preenchimento interno: o padding
+    Espaços fora da caixa: a margin
+
+Quase todo elemento de uma página é considerado uma caixa: 
+    Posicionamentos, tamanhos, espaçamentos, bordas, cores
+    Em suma, elementos HTML são caixas, assim como quase tudo no CSS.
+
+*/
+
+
+/*
+1) Estilos podem ser adicionados inline (diretamente no elemento HTML)
+
+    <h1 style="color: blue;"> Texto em azul
+        <strong style="color: red;"> e negrito vermelho </strong>
+    </h1>
+-------------------------------------------------------------------------------
+2) Também podemos adicionar na head do HTML:
+
+<head>
+    ....
+    <title>Document</title>
+        <style>
+        h1 {
+            propriedades...
+        }
+        strong {
+            propriedades...
+        }
+        </style>
+</head>
+-------------------------------------------------------------------------------
+
+3) É mais comum que seja feito um link com um documento .css externo
+
+<link rel="stylesheet" href="pathdoarquivo/style.css">
+-------------------------------------------------------------------------------
+
+4) Import -> no começo do documento .css
+    Pegar uma fonte do google fonts
+    @import url('https://..'); (sem a função url funciona também)
+
+    Usar o link para importar é mais rápido
+*/
+
+
+/*
+CASCATA
+    A escolha do browser de qual regra de estilo aplicar, caso
+    haja muitas regras para o mesmo elemento.
+    O estilo é lido de cima para baixo.
+    São levados em consideração 3 fatores:
+        
+        - Origem do estilo:
+            inline > tag style > tag link
+
+        - Especificidade: 
+            É um cálculo matemático, onde, cada tipo de seletor
+            e origem do estilo, possuem valores a serem considerados.
+
+                0.    Universal selector(*), combinators e negation pseudo-class(:not())
+                1.    Element type selector e pseudo-elements (::before, ::after)
+                10.   Classes(.) e Attribute selectors ([type="radio"])
+                100.  ID selector(#)
+                1000. Inline
+
+        - !important: 
+            - tomar cuidado. Quebra o fluxo da cascata
+            - Força um estilo
+                color:"blue !important"
+*/
+
+/*
+At-rules (@)
+    Comportamento do CSS
+    Começa com @ seguido do identificador e valor
+    Exemplos:
+        - @import     -> incluir um CSS externo
+            @import url("https://aaa...");
+
+        - @media      -> regras condicionais para dispositivos
+            @media (min-width: 500px) {
+                regras...
+            }
+
+        - @font-face  -> fontes externas
+            @font-face {
+                regras...
+            }
+
+        - @keyframes  -> animações
+            @keyframes nameOfAnimation {
+                regras...
+            }
+
+*/
+
+/* 
+SHORTHAND
+    - junção de propriedades
+    - + resumido
+    - legível
+
+    {
+        propriedades do background
+            background-color: #000;
+            background-image: url(images/bg.gif);
+            background-repeat: no-repeat;
+            background-position: left top;
+
+            background: #000 url(images/bg.gif) no-repeat left top;
+
+        propriedades de font
+            font-style: italic;
+            font-weight: bold;
+            font-size: .8em;
+            line-height: 1.2;
+            font-family: Arial, sans-serif;
+
+            font: italic bold .8em/1.2 Arial, sans-serif;
+
+    }
+
+VALORES NÃO ESPECIFICADOS SEGUEM O VALOR PADRÃO
+Geralmente a ordem descrita não importa mas se houver muitas propriedades
+com valores semelhantes podem ocorrer problemas.
+
+PROPRIEDADES QUE ACEITAM O SHORTHAND
+
+    animation, background, border, border-bottom, border-color, border-left,
+    border-radius, border-right, border-style, border-top, border-width,
+    column-rule, columns, flex, flex-flow, font, grid, grid-area, grid-column,
+    grid-row, grid-template, list-style, margin, offset, outline, overflow,
+    padding, place-content, place-items, place-self, text-decoration, transition
+*/
+
+/*
+FUNÇÕES
+    Nome seguido de abertura e fechamento de parênteses contendo argumentos
+
+    color: rgb(255,0,100);
+    width: calc(100%-10px);
+
+*/
