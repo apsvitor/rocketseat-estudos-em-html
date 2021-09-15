@@ -1,0 +1,516 @@
+<!--
+    Tags
+    - abertura
+    - fechamento
+    - conteúdo
+    - elementos
+-->
+
+<h1>
+    Conteúdo - Título
+</h1>
+
+<!--
+    Elementos vazios
+    - tag img, input ... não tem fechamento
+-->
+
+<!--
+    Atributos HTML
+    - informações extras
+    - configurações
+
+-->
+
+<img src="conteudo" alt="sem imagem">
+<input type="text">
+
+<!--
+    Atributos booleanos
+    - não precisam de conteúdo (true/false)
+-->
+<input type="text" disabled>
+
+<!--
+    Aspas
+    - omissão
+    - simples
+    - duplas
+
+    USE DUPLAS!!!
+-->
+
+<!--
+    Atributos Globais mais utilizados:
+        - class: útil para aplicar estilos CSS e também no JS
+        - contenteditable
+        - data-*
+        - hidden
+        - id
+        - style
+        - tabindex: ordem numérica para navegar com tab
+        - title: definir um titulo (aparece quando deixa o mouse em cima do elemento)
+
+-->
+
+<div class="carrinho" contenteditable="true">
+    conteúdo editável
+</div>
+
+
+<!--
+    Aninhamento de tags:
+        - Fluxo
+        - Hierarquia
+        - Posicionamento dos elementos
+-->
+
+<p>
+    Vou escrever <em> um texto.</em>
+</p>
+
+<p>
+    Novo parágrafo com <br/>quebra de linha
+</p>
+
+
+<!--
+    Conteúdo do texto e
+    caracteres reservados.
+-->
+
+<p>
+
+    Os espaços
+    <br> <!-- quebra de linha -->
+    &nbsp; <!-- espaço em branco --> 
+    &lt; &gt; <!-- Menor que e Maior que são caracteres reservados -->
+    &amp; <!-- & -->
+    &quot; <!-- aspas duplas -->
+    &apos; <!-- aspas simples -->
+    que colocamos
+    além das quebras de linha são ignorados
+</p>
+
+<!--
+    Anatomia de um documento HTML
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!--
+    SEMÂNTICA
+        - Dar signigicado
+        - Elemetos semânticos
+-->
+
+<!-- Cabeçalhos e Parágrafos -->
+
+<h1>Sobre mim</h1>
+
+<h2>Nascimento</h2>
+<h3>Infância</h3>
+<h3>Adolescência</h3>
+
+<h2>Trabalho</h2>
+
+<a href="">Saiba mais</a>
+
+
+<!--
+    Listas
+        - Ordenadas
+        - Não-ordenadas
+-->
+
+<h1>Suco Detox</h1>
+<h2>Ingredientes</h2>
+
+<ol>
+    <li>item 1</li>
+    <li>item 2</li>
+</ol>
+
+<ul>
+    <li>item a</li>
+    <li>item b</li>
+</ul>
+
+
+<!--
+    Citações
+
+    <blockquote>
+    <cite>
+    <q>
+
+-->
+
+
+<blockquote cite="google.com">
+    <p>
+        O elemento <code>&lt;blockquote&gt;</code> indica que um texto 
+        externo foi citado.
+    </p>
+</blockquote>
+
+
+<p>De acordo com <a href="google.com">
+    <cite>a página do google</cite></a>
+</p>
+
+<p>
+    O elemento qote - <code>&lt;q&gt;</code> - é 
+    <q cite="google.com">usado para citeções curtas que não precisam
+        de parágrafos ou de quebras de linha.</q> -- <a href="google.com">MDN q page </a>
+</p>
+
+<!--
+    Abreviações
+
+    <abbr>
+-->
+
+<p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar
+nossos documentos da web.</p>
+
+<!--
+    Detalhes de contato de quem fez a page
+    <address> - 
+-->
+
+<address>
+    <p>Vitor A. <br>
+    <em>Goiânia, GO</em></p>
+</address>
+
+<!--
+    Listas de descrição
+    <dl>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+-->
+
+<h2>Glossário</h2>
+<dl>
+    <dt>hypertext</dt>
+    <dd>É um hiper texto</dd>
+
+    <dt>Markup</dt>
+    <dd>Marcação de texto</dd>
+
+    <dt>Language</dt>
+    <dd>Linguagem com semântica e sintaxe.</dd>
+</dl>
+
+<!--
+    Representando códigos de computador
+    <code>
+        Partes genéricas de código
+
+    <pre>
+        Blocos de código, pois essa tag mantém os espaços em branco e recuos
+        colocados no código
+
+-->
+
+<pre>
+    <code>
+        document.
+            querySelector("body")
+    </code>
+</pre>
+
+<!--
+    Elementos genéricos
+        - <div> blocos
+        - <span> inline - fica na mesma linha
+-->
+
+<div>
+    <span>Camiseta</span>
+    <span>R$99,00</span>
+</div>
+
+
+<!--
+    HyperLinks - Elemento âncora <a>:
+
+        - Anatomia
+            <a href=""> Conteúdo </a>
+
+        - Atributos:
+            - Globais (title, id, class, ...)
+            - href
+                - Para onde iremos quando clicarmos no link?
+                    - URL completa
+                    - Fragmento
+                    - E-mail
+                    - Telefone
+                    - etc
+            - download
+            - target
+                - _self (padrão)
+                - _blank (nova aba)
+
+-->
+
+<p>Meus contatos:</p>
+<ul>
+    <li><a href="https://google.com" target="_blank">Website</a></li>
+    <li><a href="mailto:vitorantoniops@gmail.com">E-mail</a></li>
+    <li><a href="tel:+552342523236">Telefone</a></li>
+</ul>
+
+<!-- Fragmentos -->
+
+<p>Saiba mais</p>
+<ul>
+    <li><a href="#about">Sobre mim</a></li>
+    <li><a href="#history">História</a></li>
+    <li><a href="#works">Trabalhos</a></li>
+</ul>
+
+<h1 id="about">Sobre mim</h1>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, vero consectetur necessitatibus commodi ullam reprehenderit quae qui modi dignissimos. Cumque nulla perspiciatis laborum magnam deserunt, fuga consectetur quos itaque perferendis!
+
+<h2 id="history">História</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis incidunt cum doloremque ullam blanditiis consequatur praesentium laborum officia non dolore, rerum soluta quas autem harum odit, illum impedit esse!
+
+<h2 id="works">Trabalhos</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum fugiat perspiciatis placeat asperiores ducimus aperiam consectetur, quisquam, a, molestiae vero obcaecati dolorum veritatis earum odio reiciendis voluptatibus quasi eum!
+
+
+<!--
+    Conteúdo dos Hyperlinks: QUALQUER CONTEÚDO
+-->
+<a href="http://google.com" title="Ir para o Google ">
+    <h1>Google</h1>
+</a>
+
+<!--
+    URL e Caminhos dos Arquivos
+
+    - Uniform Resource Locator
+        - https://google.com
+        - Sequência de texto que define onde algo está localizado na Web
+    - URL usam caminhos para encontrar arquivos
+
+    - Caminho dos Arquivos
+        - Onde, no explorador de arquivos, um recurso está localizado
+-->
+
+<a href="/praticando1.html" target="_blank">Abrir exercicios</a><br>
+<a href="https://google.com" target="_blank">Abrir o Google</a>
+
+
+<!--
+    Navegando pelos caminhos
+        - mesmo diretório
+        - entrando em diretórios
+        - saindo de diretórios
+        - diretório raiz (root ou pai)
+-->
+<h1>Caminhos</h1>
+<a href="../../Estudos/html/praticando1.html">Retornar à pasta anterior</a><br>
+<a href="./anotacoes.html">Diretório raiz</a><br>
+<a href="anotacoes.html">Arquivo na mesma pasta (raiz tambem)</a><br>
+<a href="../html/projeto/index.html">Arquivo em outra pasta</a><br>
+
+<!--
+    URLs Absolutos vs Relativos
+
+        Absolutos:
+            - Inclui protocolo e nome de domínio
+                - http://www.google.com/html/anotacoes.html
+            - Sempre apontará para o mesmo local pois é absoluto
+        
+        Relativos:
+            - relativo à página/pasta aberta no momento
+            - apontará para lugares diferentes
+            - no exemplo abaixo, não existe google.com na pasta HTML, então dá erro
+
+-->
+<h1>URLs - Absolutos vs Relativos</h1>
+<a href="google.com">Relativo: Ir para o Google</a><br>
+<a href="https://google.com">Absoluto: Ir para o Google</a>
+<br><br><br>
+
+<!--
+    <table>
+        Prós
+            - Visualização de dados via linhas e colunas
+            - Boa acessibilidade para leitura de dados
+        
+        Contras
+            - Pouco flexível
+            - Precisa de estilização para melhor visualização
+        
+        NÃO USAR para criar seu Layout
+
+-->
+
+<table>
+
+    <caption>Pessoas por Idade</caption>
+    
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Vitor</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Vitor</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td>Total:</td>
+            <td>2 pessoas</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<br><br><br>
+
+<!--
+    2 Lojas
+        Quantos produtos foram produzidos
+        Quantos produtos foram vendidos
+        Agrupar por nome dos produtos.
+-->
+
+<table>
+
+    <caption>Produzidos X Vendidos por loja</caption>
+
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: red;">
+        <col span="2" style="background-color: blue;">
+    </colgroup>
+
+    <thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Loja 1</th>
+            <th colspan="2" scope="colgroup">Loja 2</th>
+        </tr>
+
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">Carros</th>
+            <td>50</td>
+            <td>30</td>
+            <td>20</td>
+            <td>20</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Motos</th>
+            <td>10</td>
+            <td>10</td>
+            <td>30</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+
+
+</table>
+
+<br><br><br><br>
+
+<!--
+    HEAD
+        Não é exibida no navegador
+        Configurar a página
+-->
+
+<!--
+    <meta>
+        Atributos:
+            - charset 
+            - name
+            - content
+            - author
+            - description
+            - robots
+
+-->
+
+<head>
+    <!-- SEO: Serach Engine Optimization -> motores de busca (google, yahoo..)-->
+
+    <!-- Codificação de caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Portabilidade para dispositivos mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Autor -->
+    <meta name="author" content="Vitor">
+    <!-- Descrição -->
+    <meta name="description" content="Estudando HTML">
+    <!-- Robôs -->
+    <meta name="robots" content="">
+    <!-- index, noindex, nofollow, follow, ... -->
+</head>
+
+<!--
+    <meta> em redes sociais
+-->
+
+<head>
+    <!-- Open Graph: Facebook -->
+    <meta property="og:image" content="url_da_imagem">
+</head>
+
+
+<!--
+    <link> para ícones personalizados
+-->
+
+<!-- favicon básico -->
+<link rel="icon" href=""/>
+
+<!-- iPhone não-retina, iPod Touch e dispositivos Android 2.1+ -->
+<link rel="apple-touch-icon-precomposed" href=""/>
+
+<!-- iPad de primeira e segunda geração -->
+<link rel="apple-touch-icon" sizes="48x48" href=""/>
+<link rel="apple-touch-icon" sizes="72x72" href=""/>
+<link rel="apple-touch-icon" sizes="96x96" href=""/>
+
+
+
